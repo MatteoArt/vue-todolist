@@ -31,6 +31,7 @@ Vue.createApp({
                 }
             ],
             barred: "barred-txt",
+            elBtn: "btn-delete",
         }
     },
     methods: {
