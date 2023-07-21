@@ -40,8 +40,23 @@ header:after {
     margin-top: 20px;
 }
 .card {
-    margin-top: 15px;
+    margin-top: 25px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
 }
 .todo-list {
-    
+    list-style-type: none;
+}
+.todo-item {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+}
+.todo-item:last-child {
+    border-bottom: 0;
+}
+.barred-txt {
+    color: lightgray;
+    text-decoration: line-through;
 }

@@ -19,10 +19,29 @@ Vue.createApp({
                     text: "Go to work",
                     done: false
                 },
-            ]
+                {
+                    id: 4,
+                    text: "Check emails",
+                    done: true
+                },
+                {
+                    id: 5,
+                    text: "Go to gym",
+                    done: false
+                }
+            ],
+            barred: "barred-txt",
         }
     },
     methods: {
-
+        //riceve in ingresso un booleano e controlla se la proprietà
+        //done e true o false
+        crossedOut(done) {
+            if (done === true) {
+                return this.barred;
+            } else {
+                return "";
+            }
+        }
     }
 }).mount("#app");
