@@ -38,6 +38,22 @@ header:after {
 }
 .input-div {
     margin-top: 20px;
+    display: flex;
+}
+.add-btn {
+    width: 50px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-btn:hover {
+    background-color: rgb(5, 168, 5);
 }
 .card {
     margin-top: 25px;
