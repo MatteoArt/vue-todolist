@@ -43,6 +43,22 @@ Vue.createApp({
             } else {
                 return "";
             }
-        }
+        },
+        //funzione a cui passo l'id dell'elemento dell'array di oggetti
+        //da eliminare
+        deleteItem(id) {
+            //indice dell'oggetto da eliminare
+            let index;
+            for (let i = 0; i < this.todoArr.length; i++) {
+                let item = this.todoArr[i];
+                if (item.id === id) {
+                    index = i;
+                    break;
+                }
+            }
+            //ora che ho l'indice elimino l'oggetto nell'array in
+            //posizione index
+            this.todoArr.splice(index,1);
+        },
     }
 }).mount("#app");

@@ -73,4 +73,9 @@ header:after {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-} 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.todo-item:hover .btn-delete {
+    opacity: 1;
+}
