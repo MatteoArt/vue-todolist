@@ -21,11 +21,12 @@
             <div class="input-div">
                 <input class="input-val" type="text" 
                 placeholder="What do you want to remember?" 
-                id="input1" v-model="newTodoItem.text">
+                id="input1" v-model="newTodoItem.text"
+                @keyup.enter="addTodo">
                 <div class="add-btn" @click="addTodo"><i class="fa-solid fa-plus fa-xl"></i></div>
             </div>
 
-            <div class="card">
+            <div class="card" v-if="todoArr.length > 0">
                 <ul class="todo-list">
                     <!-- lista generata dinamicamente -->
                     <li class="todo-item" v-for="el in todoArr"
@@ -34,7 +35,9 @@
                         <span :class="elBtn" @click="deleteItem(el.id)"><i class="fa-solid fa-xmark fa-sm"></i></span>
                     </li>
                 </ul>
+                <div id="reset" @click="resetList">Reset list</div>
             </div>
+            <div class="empty" v-else>Your To do list is empty.</div>
         </div>
     </div>
 

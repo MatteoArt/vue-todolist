@@ -74,6 +74,9 @@ Vue.createApp({
             itemCopia.id = ++this.currentId;
             
             this.todoArr.push(itemCopia);
+        },
+        resetList() {
+            this.todoArr = [];
         }
     }
 }).mount("#app");
