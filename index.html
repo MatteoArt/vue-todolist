@@ -19,8 +19,10 @@
             <h1 class="title">To Do List</h1>
 
             <div class="input-div">
-                <input class="input-val" type="text" placeholder="What do you want to remember?" id="input1">
-                <div class="add-btn"><i class="fa-solid fa-plus fa-xl"></i></div>
+                <input class="input-val" type="text" 
+                placeholder="What do you want to remember?" 
+                id="input1" v-model="newTodoItem.text">
+                <div class="add-btn" @click="addTodo"><i class="fa-solid fa-plus fa-xl"></i></div>
             </div>
 
             <div class="card">

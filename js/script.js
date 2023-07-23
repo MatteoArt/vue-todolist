@@ -32,11 +32,18 @@ Vue.createApp({
             ],
             barred: "barred-txt",
             elBtn: "btn-delete",
+            //oggetto che viene pushato nell'array di oggetti 
+            //ogni volta che l'utente clicca per aggiungere
+            newTodoItem: {
+                text: "",
+                done: false
+            },
+            currentId: 5 //proprietà che conterrà di volta in volta l'id dell'ultimo elemento aggiunto
         }
     },
     methods: {
         //riceve in ingresso un booleano e controlla se la proprietà
-        //done e true o false
+        //done è true o false
         crossedOut(done) {
             if (done === true) {
                 return this.barred;
@@ -60,5 +67,13 @@ Vue.createApp({
             //posizione index
             this.todoArr.splice(index,1);
         },
+        //funzione che al click aggiunge un elemento alla lista
+        addTodo() {
+            //creo clone dell'oggetto newTodoItem per eliminare la reattività
+            const itemCopia = {...this.newTodoItem};
+            itemCopia.id = ++this.currentId;
+            
+            this.todoArr.push(itemCopia);
+        }
     }
 }).mount("#app");
