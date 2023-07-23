@@ -77,6 +77,22 @@ Vue.createApp({
         },
         resetList() {
             this.todoArr = [];
+        },
+        onText(id) {
+            let index;
+            for (let i = 0; i < this.todoArr.length; i++) {
+                let selectedItem = this.todoArr[i];
+                if (selectedItem.id === id) {
+                    index = i;
+                    break;
+                }
+            }
+
+            //ora che so qual'è l'oggetto nell'array posso cambiare la
+            //proprietà done
+            const myItem = this.todoArr[index];
+
+            myItem.done = !(myItem.done);
         }
     }
 }).mount("#app");

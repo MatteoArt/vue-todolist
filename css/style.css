@@ -106,3 +106,7 @@ header:after {
     cursor: pointer;
     padding: 5px 0 7px 15px;
 }
+.do-text {
+    display: inline-block;
+    cursor: pointer;
+}
